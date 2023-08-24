@@ -30,7 +30,7 @@ export default function Blog() {
     setAskMeAnythingResponse({ content: "loading" });
     axios
       .post(
-        `https://api.investaware.beyondirr.tech/blogs/chatgpt/?id=${id}&query=${query}`
+        `{{url}}blogs/chatgpt/?id=${id}&query=${query}`
       )
       .then((response) => {
         setAskMeAnythingResponse({
@@ -49,7 +49,7 @@ export default function Blog() {
 
   useEffect(() => {
     axios
-      .get("https://api.investaware.beyondirr.tech/blogs/", {
+      .get("{{url}}blogs/", {
         params: {
           id: id,
         },

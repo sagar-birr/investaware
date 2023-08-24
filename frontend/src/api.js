@@ -56,18 +56,18 @@ axios.interceptors.response.use(
 const api = {
   login: (body) => {
     return axios.post(
-      "https://api.investaware.beyondirr.tech/accounts/auth/token/",
+      "{{url}}accounts/auth/token/",
       body
     );
   },
   refreshToken: (body) => {
     return axios.post(
-      "https://api.investaware.beyondirr.tech/accounts/auth/token/refresh/",
+      "{{url}}accounts/auth/token/refresh/",
       body
     );
   },
   getBlogs: () => {
-    return axios.get("https://api.investaware.beyondirr.tech/blogs/");
+    return axios.get("{{url}}blogs/");
   },
 };
 export default api;
